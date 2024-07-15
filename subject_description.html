@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Description</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+        h1 {
+            margin: 20px;
+        }
+        .description-table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .description-table th, .description-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .description-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Subject Description</h1>
+
+    <table class="description-table">
+        <tr>
+            <th>Average Marks</th>
+            <th>Description</th>
+            <th>Resources</th>
+        </tr>
+        <tr>
+            <td>{{ avg_marks }}</td>
+            <td>{{ description }}</td>
+            <td>{{ resources }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ url_for('user') }}">Back to Subjects</a>
+
+</body>
+</html>
